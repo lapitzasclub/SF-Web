@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<!DOCTYPE squad SYSTEM "squad.dtd">
+<?xml-stylesheet href="squad.xsl" type="text/xsl"?>
+
+<squad nick="SF">
+	<name>Silver Force</name>
+	<email>silverforceclanarma@gmail.com</email>
+	<web>http://silverforce.noip.me</web>
+	<picture>SF_Insignia.paa</picture>
+	<title>Somos plata, repartimos plomo</title>
+	<member id="76561198062065523" nick="Rednall">
+		<name>Rednall</name>
+		<email>lapitzasclub@gmail.com</email>
+		<icq>N/A</icq>
+		<remark>Una bala, un cadáver</remark>
+	</member>
+	<member id="76561198008584549" nick="jatxu83">
+		<name>Jatxu</name>
+		<email>pljatxispl@gmail.com</email>
+		<icq>N/A</icq>
+		<remark>Comandante</remark>
+	</member>
+	<member id="76561198188514555" nick="Ricardo">
+		<name>Ricardo</name>
+		<email>zabalonchi@gmail.com</email>
+		<icq>N/A</icq>
+		<remark>¿Tiempo para la detonación?</remark>
+	</member>
+	<member id="76561198079320127" nick="behin">
+		<name>Jose</name>
+		<email>behingoaz@gmail.com</email>
+		<icq>N/A</icq>
+		<remark>La veterania personificada</remark>
+	</member>
+	<member id="76561198037337133" nick="Khuru">
+		<name>Khuru</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Siempre preparado para lo que venga</remark>
+	</member>
+	<member id="76561198005605853" nick="menorki">
+		<name>Menorki</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Pasión por ArmA III</remark>
+	</member>
+	<member id="76561198063791465" nick="Nito">
+		<name>Nito</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Sin piedad. Sin remordimientos. Sin miedo.</remark>
+	</member>
+	<member id="76561198088876106" nick="RIDDICK">
+		<name>Riddick</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Be silver my friend</remark>
+	</member>
+	<member id="76561198003336860" nick="leape">
+		<name>Lea</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Donde haga falta</remark>
+	</member>
+	<member id="76561198261626551" nick="Jesus Fernandez">
+		<name>Jesus</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>El señor de la guerra le cría y él la lía</remark>
+	</member>
+	<member id="76561198143360847" nick="Dami98">
+		<name>Dami</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>La adicción a las explosiones y a la morfina definen mi personalidad</remark>
+	</member>
+	<member id="76561198159117294" nick="Asasinblack">
+		<name>Asasinblack</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Sólo los muertos han visto el final de la guerra</remark>
+	</member>
+	<member id="76561198393190999" nick="Lluis">
+		<name>Lluis</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>¿Metralla en la cabeza? No hay problema</remark>
+	</member>
+	<member id="76561198077313668" nick="Rod">
+		<name>Rodrino</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Un grano no hace granero, pero ayuda al compañero</remark>
+	</member>
+	<member id="76561198083840050" nick="Dani">
+		<name>Dani (Pitofloro)</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Vamos a partir a la mitad a esos malnacidos</remark>
+	</member>
+	<member id="76561197989240570" nick="CharlieGlasgow">
+		<name>Charlie</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark></remark>
+	</member>
+	<member id="76561198089666461" nick="Chimi">
+		<name>Chimi</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark></remark>
+	</member>
+	<member id="76561198019477078" nick="Jota">
+		<name>Jota</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Todos Somos un mismo compañero, nadie queda atrás</remark>
+	</member>
+	<member id="76561198082275149" nick="Chicho98">
+		<name>Chicho</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Hooyah</remark>
+	</member>
+	<member id="76561198087475313" nick="Tito">
+		<name>Tito</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Si fuera seguro lo haría cualquiera</remark>
+	</member>
+	<member id="76561198139324529" nick="Kiro">
+		<name>Kiro</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark></remark>
+	</member>
+</squad>
