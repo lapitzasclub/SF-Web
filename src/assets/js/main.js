@@ -1,3 +1,5 @@
+/* jslint browser: true, node: true */
+/* global window */
 'use strict';
 
 //check the environment
@@ -11,7 +13,7 @@ import scss from '../css/sass.scss';
 // import Js Plugins/Entities
 import 'bootstrap';
 
-import '../vendor/underscore-min.js';
+import * as underscore from '../vendor/underscore-min.js';
 import '../vendor/hammerjs/hammer.min.js';
 import '../vendor/hammerjs/hammer-time.min.js';
 import '../vendor/TweenMax.min.js';
@@ -35,9 +37,9 @@ import '../vendor/blueimp-gallery/js/blueimp-gallery-video.js';
 import '../vendor/blueimp-gallery/js/blueimp-gallery-vimeo.js';
 import '../vendor/blueimp-gallery/js/blueimp-gallery-youtube.js';
 import '../vendor/blueimp-gallery/js/jquery.blueimp-gallery.min.js';
-import Trianglify from '../vendor/trianglify.min.js';
+import * as trianglify from '../vendor/trianglify.min.js';
 import '../vendor/ScrollToPlugin.min.js';
-import '../vendor/Card-circle.js';
+import * as cardCircle from '../vendor/Card-circle.js';
 
 import './gallery.js';
 
@@ -47,6 +49,10 @@ import * as navOptions from './nav.js';
 import * as steamEvents from './steamEvents.js';
 import * as members from './members.js';
 import * as missions from './missions.js';
+
+window.Trianglify = trianglify;
+window.Card = cardCircle.Card;
+window._ = underscore;
 
 window.bloquearPantalla = silverForce.bloquearPantalla;
 window.desbloquearPantalla = silverForce.desbloquearPantalla;
@@ -62,12 +68,6 @@ window.dom = {
 window.firstMission = missions.firstMission;
 window.currentSlideNumber = missions.currentSlideNumber;
 window.missionCards = missions.missionCards;
-
-//ES6 Module
-import Bar1 from './entities/Bar1';
-//CommonJS
-var Bar2 = require('./entities/Bar2');
-
 
 $(function () {
 

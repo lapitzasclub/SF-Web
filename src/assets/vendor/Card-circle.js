@@ -3,7 +3,7 @@
 /**
  * Card.
  */
-var Card = (function(window, undefined) {
+export var Card = (function(window, undefined) {
 
   /**
    * Enum of CSS selectors.

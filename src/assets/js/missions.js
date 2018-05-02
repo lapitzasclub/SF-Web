@@ -13,6 +13,7 @@ export function firstMission() {
 }
 
 export function initMissions() {
+  var delta = 0;
   var ticking = false;
   var isFirefox = (/Firefox/i.test(navigator.userAgent));
   var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(navigator.userAgent));
