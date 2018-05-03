@@ -197,6 +197,8 @@ body::-webkit-scrollbar-thumb {
 
 hr.small {
   max-width: 100px;
+  display: inline-block;
+  width: 100%;
 }
 
 /* Header */

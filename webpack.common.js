@@ -76,6 +76,19 @@ module.exports = {
                     outputPath: 'assets/fonts/'
                 }
             }
+        }, {
+            test: /\.(html)\??.*$/,
+            use: {
+                loader: 'url-loader',
+                options: {
+                    limit: 1024,
+                    name: '[name].[ext]',
+                    publicPath: '/assets/tmpls/',
+                    outputPath: 'assets/tmpls/'
+                }
+            },
+            exclude: ['/src/index.html', '/src/assets/html'],
+            include: '/src/assets/vendor/bootstrap-calendar/tmpls'
         }]
     },
     plugins: [
