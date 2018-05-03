@@ -1,4 +1,4 @@
-/* jslint browser: true, node: true */
+/* jslint browser: true, node: true, jquery: true */
 /* global window */
 'use strict';
 
@@ -43,13 +43,17 @@ import * as cardCircle from '../vendor/Card-circle.js';
 
 import './gallery.js';
 
-
 import * as silverForce from './silverForce.js';
 import * as navOptions from './nav.js';
 import * as steamEvents from './steamEvents.js';
 import * as members from './members.js';
 import * as missions from './missions.js';
 
+var tmpls_Day = require('file-loader?-attrs!../vendor/bootstrap-calendar/tmpls/day.html');
+var tmpls_Month = require('file-loader?-attrs!../vendor/bootstrap-calendar/tmpls/month.html');
+var tmpls_Year = require('file-loader?-attrs!../vendor/bootstrap-calendar/tmpls/year.html');
+
+debugger;
 window.Trianglify = trianglify;
 window.Card = cardCircle.Card;
 window._ = underscore;
@@ -138,22 +142,17 @@ $(function () {
 
     // Mostrar las más vistas de la galería
     fncGetAllPhotosList();
-
-    // Inicializar el calendario de eventos de steam
-    calendar = $('#calendar').calendar(options);
-
-    fncCalendarButtons();
     */
 
+    steamEvents.initSteamEvents();
     members.initMembers();
-
     missions.initMissions();
 
     if (window.location.hash !== undefined &&
         window.location.hash !== null &&
         window.location.hash !== '' &&
-        ($(window.location.hash + '.page').length > 0 || dom[window.location.hash.split('#')[1]] || window.location.hash.split('-')[1] === 'members')) {
-        goTo(window.location.hash.split('#')[1]);
+        ($(window.location.hash + '.page').length > 0 || window.dom[window.location.hash.split('#')[1]] || window.location.hash.split('-')[1] === 'members')) {
+        navOptions.goTo(window.location.hash.split('#')[1]);
     }
 
 }(jQuery));

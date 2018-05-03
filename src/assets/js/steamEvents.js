@@ -2,23 +2,23 @@ export var options = {
   language: 'es-ES',
   events_source: getSteamGroupEvents,
   view: 'month',
-  tmpl_path: './assets/bootstrap-calendar/tmpls/',
+  tmpl_path: './assets/tmpls/',
   tmpl_cache: false,
   // day: '2013-03-12',
-  onAfterEventsLoad: function(events) {
+  onAfterEventsLoad: function (events) {
     if (!events) {
       return;
     }
     var list = $('#eventlist');
     list.html('');
 
-    $.each(events, function(key, val) {
+    $.each(events, function (key, val) {
       $(document.createElement('li'))
         .html('<a href="' + val.url + '">' + val.title + '</a>')
         .appendTo(list);
     });
   },
-  onAfterViewLoad: function(view) {
+  onAfterViewLoad: function (view) {
     $('.page-header h3').text(this.getTitle());
     $('.btn-group button').removeClass('active');
     $('button[data-calendar-view="' + view + '"]').addClass('active');
@@ -33,7 +33,7 @@ export var options = {
 export var calendar;
 
 export function getSteamGroupEvents(from, to) {
-  calendarEvents = [];
+  var calendarEvents = [];
   var eventsPending = 0;
 
   // Se recorren los años del intervalo
@@ -53,14 +53,14 @@ export function getSteamGroupEvents(from, to) {
       eventsPending++;
 
       // Now do the AJAX heavy lifting
-      $.getJSON(yqlURL, function(data) {
+      $.getJSON(yqlURL, function (data) {
         xmlContent = $(data.results[0]);
         var arrEvents = $(xmlContent).find("event");
         var arrExpiredEvents = $(xmlContent).find("expiredEvent");
         var month = moment($(data.results[0]).find('monthName').html().split(/[\[\]]/)[2], 'MMMM').format('MM');
         var year = moment($(data.results[0]).find('year').html().split(/[\[\]]/)[2], 'YYYY').format('YYYY');
 
-        arrEvents.each(function(i, e) {
+        arrEvents.each(function (i, e) {
           var day = parseInt($($(e).find('.eventDateBlock').find('span')[0]).text().replace(/[^0-9\.]/g, ''), 10);
           var hours = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(0, 2);
           var minutes = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(3, 2);
@@ -98,7 +98,7 @@ export function getSteamGroupEvents(from, to) {
           // alert('timeES: ' + timeES.format('DD/MM/YYYY HH:mm'));
         });
 
-        arrExpiredEvents.each(function(i, e) {
+        arrExpiredEvents.each(function (i, e) {
           var day = parseInt($($(e).find('.eventDateBlock').find('span')[0]).text().replace(/[^0-9\.]/g, ''), 10);
           var hours = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(0, 2);
           var minutes = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(3, 2);
@@ -156,21 +156,21 @@ export function getSteamGroupEvents(from, to) {
 }
 
 export function fncCalendarButtons() {
-  $('.btn-group button[data-calendar-nav]').each(function() {
+  $('.btn-group button[data-calendar-nav]').each(function () {
     var $this = $(this);
-    $this.click(function() {
+    $this.click(function () {
       calendar.navigate($this.data('calendar-nav'));
     });
   });
 
-  $('.btn-group button[data-calendar-view]').each(function() {
+  $('.btn-group button[data-calendar-view]').each(function () {
     var $this = $(this);
-    $this.click(function() {
+    $this.click(function () {
       calendar.view($this.data('calendar-view'));
     });
   });
 
-  $('#first_day').change(function() {
+  $('#first_day').change(function () {
     var value = $(this).val();
     value = value.length ? parseInt(value) : null;
     calendar.setOptions({
@@ -179,39 +179,39 @@ export function fncCalendarButtons() {
     calendar.view();
   });
 
-  $('#language').change(function() {
+  $('#language').change(function () {
     calendar.setLanguage($(this).val());
     calendar.view();
   });
 
-  $('#events-in-modal').change(function() {
+  $('#events-in-modal').change(function () {
     var val = $(this).is(':checked') ? $(this).val() : null;
     calendar.setOptions({
       modal: val
     });
   });
-  $('#format-12-hours').change(function() {
+  $('#format-12-hours').change(function () {
     var val = $(this).is(':checked') ? true : false;
     calendar.setOptions({
       format12: val
     });
     calendar.view();
   });
-  $('#show_wbn').change(function() {
+  $('#show_wbn').change(function () {
     var val = $(this).is(':checked') ? true : false;
     calendar.setOptions({
       display_week_numbers: val
     });
     calendar.view();
   });
-  $('#show_wb').change(function() {
+  $('#show_wb').change(function () {
     var val = $(this).is(':checked') ? true : false;
     calendar.setOptions({
       weekbox: val
     });
     calendar.view();
   });
-  $('#events-modal .modal-header, #events-modal .modal-footer').click(function(e) {
+  $('#events-modal .modal-header, #events-modal .modal-footer').click(function (e) {
     //e.preventDefault();
     //e.stopPropagation();
   });
@@ -237,7 +237,7 @@ export function fncNextEvent(event, date, end) {
   ].join("");
 
   // Now do the AJAX heavy lifting
-  $.getJSON(yqlURL, function(data) {
+  $.getJSON(yqlURL, function (data) {
     xmlContent = $(data.results[0]);
     var nextEvent = $(xmlContent).find("event:first");
     var month = moment($(data.results[0]).find('monthName').html().split(/[\[\]]/)[2], 'MMMM').format('MM');
@@ -279,7 +279,7 @@ export function fncNextEvent(event, date, end) {
       focusConfirm: false,
       confirmButtonText: 'Anotarlo',
       cancelButtonText: 'Cerrar',
-    }, function() {
+    }, function () {
       var time = moment.tz(completa, 'YYYY-MM-DD HH:mm', 'America/Los_Angeles');
       var timeES = time.clone().tz("Europe/Madrid");
       var hoursEs = timeES.format('HH');
@@ -288,4 +288,10 @@ export function fncNextEvent(event, date, end) {
 
     fncProcessLinks2Hash('#lnkVerPlan');
   });
+}
+
+export function initSteamEvents() {
+  calendar = $('#calendar').calendar(options);
+
+  fncCalendarButtons();
 }
