@@ -1,3 +1,5 @@
+import moment from 'moment-timezone';
+
 export var options = {
   language: 'es-ES',
   events_source: getSteamGroupEvents,
@@ -53,8 +55,8 @@ export function getSteamGroupEvents(from, to) {
       eventsPending++;
 
       // Now do the AJAX heavy lifting
-      $.getJSON(yqlURL, function (data) {
-        xmlContent = $(data.results[0]);
+      $.getJSON(yqlURL, (data) => {
+        var xmlContent = $(data.results[0]);
         var arrEvents = $(xmlContent).find("event");
         var arrExpiredEvents = $(xmlContent).find("expiredEvent");
         var month = moment($(data.results[0]).find('monthName').html().split(/[\[\]]/)[2], 'MMMM').format('MM');
@@ -65,14 +67,15 @@ export function getSteamGroupEvents(from, to) {
           var hours = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(0, 2);
           var minutes = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(3, 2);
           var pm = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(5, 2);
+          var hours24;
 
           if (pm === 'pm') {
             if (hours !== '12') {
-              var hours24 = parseInt(hours) + 12;
+              hours24 = parseInt(hours) + 12;
               hours = String("0" + hours24).slice(-2);
             }
           } else if (hours === '12') {
-            var hours24 = 0;
+            hours24 = 0;
           }
 
           var completa = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;

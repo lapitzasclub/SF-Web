@@ -12,7 +12,6 @@ import scss from '../css/sass.scss';
 
 // import Js Plugins/Entities
 import 'bootstrap';
-
 import * as underscore from '../vendor/underscore-min.js';
 import '../vendor/hammerjs/hammer.min.js';
 import '../vendor/hammerjs/hammer-time.min.js';
@@ -22,38 +21,32 @@ import '../vendor/sweetalert/sweetalert.min.js';
 import FooNav from '../vendor/foonav/js/foonav.js';
 import '../vendor/isInViewport.js';
 import '../vendor/tether/tether.min.js';
-/*
-import '../vendor/momentjs/global.js';
-import '../vendor/momentjs/moment-with-locales.min.js';
-import '../vendor/momentjs/moment-timezone-with-data.min.js';
-*/
 import '../vendor/bootstrap-calendar/js/calendar.js';
 import '../vendor/bootstrap-calendar/js/calendar-language_es-ES.js';
 import '../vendor/blueimp-gallery/js/blueimp-helper.js';
-import '../vendor/blueimp-gallery/js/blueimp-gallery.min.js';
-import '../vendor/blueimp-gallery/js/blueimp-gallery-fullscreen.js';
-import '../vendor/blueimp-gallery/js/blueimp-gallery-indicator.js';
-import '../vendor/blueimp-gallery/js/blueimp-gallery-video.js';
-import '../vendor/blueimp-gallery/js/blueimp-gallery-vimeo.js';
-import '../vendor/blueimp-gallery/js/blueimp-gallery-youtube.js';
-import '../vendor/blueimp-gallery/js/jquery.blueimp-gallery.min.js';
 import * as trianglify from '../vendor/trianglify.min.js';
 import '../vendor/ScrollToPlugin.min.js';
 import * as cardCircle from '../vendor/Card-circle.js';
 
-import './gallery.js';
-
 import * as silverForce from './silverForce.js';
 import * as navOptions from './nav.js';
+import * as gallery from './gallery.js';
 import * as steamEvents from './steamEvents.js';
 import * as members from './members.js';
 import * as missions from './missions.js';
 
-var tmpls_Day = require('file-loader?-attrs!../vendor/bootstrap-calendar/tmpls/day.html');
-var tmpls_Month = require('file-loader?-attrs!../vendor/bootstrap-calendar/tmpls/month.html');
-var tmpls_Year = require('file-loader?-attrs!../vendor/bootstrap-calendar/tmpls/year.html');
+window.tmpls = {
+    'day': require('html-loader!../vendor/bootstrap-calendar/tmpls/day.html'),
+    'week': require('html-loader!../vendor/bootstrap-calendar/tmpls/week.html'),
+    'week-days': require('html-loader!../vendor/bootstrap-calendar/tmpls/week-days.html'),
+    'month': require('html-loader!../vendor/bootstrap-calendar/tmpls/month.html'),
+    'month-day': require('html-loader!../vendor/bootstrap-calendar/tmpls/month-day.html'),
+    'year': require('html-loader!../vendor/bootstrap-calendar/tmpls/year.html'),
+    'year-month': require('html-loader!../vendor/bootstrap-calendar/tmpls/year-month.html'),
+    'events-list': require('html-loader!../vendor/bootstrap-calendar/tmpls/events-list.html'),
+    'modal': require('html-loader!../vendor/bootstrap-calendar/tmpls/modal.html')
+};
 
-debugger;
 window.Trianglify = trianglify;
 window.Card = cardCircle.Card;
 window._ = underscore;
@@ -130,20 +123,7 @@ $(function () {
     // Scrolls to the selected menu item on the page
     silverForce.fncProcessLinks2Hash();
 
-    /*
-    // Inicializar el carrusel
-    blueimp.Gallery(
-        carouselLinks, {
-            container: '#blueimp-image-carousel',
-            carousel: true,
-            clearSlides: true,
-            stretchImages: true
-        });
-
-    // Mostrar las más vistas de la galería
-    fncGetAllPhotosList();
-    */
-
+    gallery.initGallery('#blueimp-image-carousel');
     steamEvents.initSteamEvents();
     members.initMembers();
     missions.initMissions();
