@@ -30,7 +30,7 @@ function fncCreateGalleryItem(baseUrl, title) {
         .append($('<img>').prop('src', baseUrl + '_s.jpg'))
         .prop('href', baseUrl + '_b.jpg')
         .prop('title', title)
-        .attr('data-gallery', '')
+        .attr('data-gallery', '');
 }
 
 function sortByProperty(property) {
