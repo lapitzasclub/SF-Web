@@ -1,3 +1,5 @@
+/* jslint browser: true, node: true, jquery: true */
+/* global window */
 /**
  * Bootstrap based calendar full view.
  *
@@ -1016,16 +1018,17 @@ if(!String.prototype.formatNum) {
 		if(this.options.templates[name]) {
 			return;
 		}
-		var self = this;
-		$.ajax({
-			url: self._templatePath(name),
-			dataType: 'html',
-			type: 'GET',
-			async: false,
-			cache: this.options.tmpl_cache
-		}).done(function(html) {
-			self.options.templates[name] = _.template(html);
-		});
+		// var self = this;
+		// $.ajax({
+		// 	url: self._templatePath(name),
+		// 	dataType: 'html',
+		// 	type: 'GET',
+		// 	async: false,
+		// 	cache: this.options.tmpl_cache
+		// }).done(function(html) {
+		// 	self.options.templates[name] = _.template(html);
+		// });
+		this.options.templates[name] = _.template(window.tmpls[name]);
 	};
 
 	Calendar.prototype._update = function() {

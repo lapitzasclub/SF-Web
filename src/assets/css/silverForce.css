@@ -5,17 +5,21 @@
   src: url(../fonts/BlackOpsOne-Regular.ttf);
 }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100%;
 }
 
-body:before, body:after {
+body:before,
+body:after {
   content: '';
   height: 50vh;
   width: 100%;
@@ -177,7 +181,9 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -188,7 +194,9 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(255, 255, 255);
 }
 
-.btn-light:hover, .btn-light:focus, .btn-light:active {
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
   color: #333;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -228,7 +236,8 @@ hr.small {
   font-size: 5vh;
 }
 
-.header h1, .header h3 {
+.header h1,
+.header h3 {
   text-shadow: -1px 0 silver, 0 1px silver, 1px 0 silver, 0 -1px silver;
 }
 
@@ -256,6 +265,11 @@ hr.small {
 
 .galeria {
   padding: 50px 0;
+}
+
+.galeria .links a {
+  display: inline-block;
+  margin-top: -6px;
 }
 
 /* Events */
@@ -432,7 +446,8 @@ hr.small {
   padding: 0.5rem 0;
 }
 
-.fon-nav a:hover, .fon-nav a:focus {
+.fon-nav a:hover,
+.fon-nav a:focus {
   text-decoration: none;
 }
 
@@ -525,7 +540,8 @@ hr.small {
   margin-bottom: 10px;
 }
 
-.logo:focus, .logo:hover {
+.logo:focus,
+.logo:hover {
   color: #BEBEC1;
 }
 
@@ -592,7 +608,8 @@ hr.small {
   font-size: 12px;
 }
 
-.mynav-nav ul a:focus, .mynav-nav ul a:hover {
+.mynav-nav ul a:focus,
+.mynav-nav ul a:hover {
   color: #888888;
 }
 

@@ -1,19 +1,29 @@
-var carouselUrl = './app/img/gallery/carousel/';
-var collageUrl = './app/img/gallery/collage/';
+import blueimp from '../vendor/blueimp-gallery/js/blueimp-gallery.min.js';
+import '../vendor/blueimp-gallery/js/blueimp-gallery-fullscreen.js';
+import '../vendor/blueimp-gallery/js/blueimp-gallery-indicator.js';
+import '../vendor/blueimp-gallery/js/blueimp-gallery-video.js';
+import '../vendor/blueimp-gallery/js/blueimp-gallery-vimeo.js';
+import '../vendor/blueimp-gallery/js/blueimp-gallery-youtube.js';
+import '../vendor/blueimp-gallery/js/jquery.blueimp-gallery.min.js';
+
+import c1 from '../img/gallery/carousel/0001.jpg';
+import c2 from '../img/gallery/carousel/0012.jpg';
+import c3 from '../img/gallery/carousel/0013.jpg';
+import c4 from '../img/gallery/carousel/0018.jpg';
 
 var carouselLinks = [{
-    href: carouselUrl + '0001.jpg',
+    href: c1,
     title: 'Fight for Ca$h'
 }, {
-    href: carouselUrl + '0012.jpg',
+    href: c2,
     title: 'Sangre por sangre'
 }, {
-    href: carouselUrl + '0013.jpg',
+    href: c3,
     title: 'Fría noche en Chernarus'
 }, {
-    href: carouselUrl + '0018.jpg',
+    href: c4,
     title: 'Todos listos'
-}]
+}];
 
 function fncCreateGalleryItem(baseUrl, title) {
     return $('<a/>')
@@ -67,13 +77,13 @@ function fncGetAllPhotosList(photos, page) {
             Array.prototype.push.apply(photos, result.photos.photo);
 
             if (result.photos.pages == 1 || result.photos.page == result.photos.pages) {
-                var linksContainer = $('#links')
+                var linksContainer = $('#links');
                 var baseUrl;
                 photos.sort(sortByProperty('views'));
                 photos = photos.slice(0,150);
                 $.each(photos, function(index, photo) {
                     baseUrl = 'https://farm' + photo.farm + '.static.flickr.com/' +
-                        photo.server + '/' + photo.id + '_' + photo.secret
+                        photo.server + '/' + photo.id + '_' + photo.secret;
                     fncCreateGalleryItem(baseUrl, photo.title).appendTo(linksContainer);
                 });
             } else {
@@ -81,4 +91,18 @@ function fncGetAllPhotosList(photos, page) {
             }
         }
     });
+}
+
+export function initGallery(selector){
+    // Inicializar el carrusel
+    blueimp(
+        carouselLinks, {
+            container: selector,
+            carousel: true,
+            clearSlides: true,
+            stretchImages: true
+        });
+
+    // Mostrar las más vistas de la galería
+    fncGetAllPhotosList();
 }
