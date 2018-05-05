@@ -1,12 +1,13 @@
 <div class="card__container card__container--closed">
-  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+    preserveAspectRatio="xMidYMid slice">
     <defs>
       <clipPath id="clipPath-jesus">
         <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
         <circle class="clip" cx="960" cy="250" r="992"></circle>
       </clipPath>
     </defs>
-    <image clip-path="url(#clipPath-jesus)" width="1920" height="500" xlink:href="./app/html/members/jesus/jesus.jpg"></image>
+    <image clip-path="url(#clipPath-jesus)" width="1920" height="500" xlink:href="${ require('./jesus.jpg') }"></image>
   </svg>
   <div class="card__content">
     <i class="card__btn-close fa fa-times"></i>
@@ -16,7 +17,7 @@
     </div>
     <div class="card__copy">
       <div class="meta">
-        <img class="meta__avatar" src="./app/html/members/jesus/jesus-face.jpg" alt="jesus" />
+        <img class="meta__avatar" src="${ require('./jesus-face.jpg') }" alt="jesus" />
         <div class="meta__author">
           <h3 class="card__title">Jesús Fernández</h3>
           <small class="card__subtitle">El señor de la guerra le cría y él la lía</small>
@@ -27,7 +28,8 @@
       <p class="first">
         Si silver Force fuese el equipo A... me pido Murdock.
       </p>
-      <p>Tanquista artillero, piloto de helicópteros acostumbrado a los ligeros de reconocimiento y trasporte, médico de campo e imán de balas y muchas cosas mas.</p>
+      <p>Tanquista artillero, piloto de helicópteros acostumbrado a los ligeros de reconocimiento y trasporte, médico de campo
+        e imán de balas y muchas cosas mas.</p>
 
       <h4 class="mt-4">Méritos</h4>
       <hr>

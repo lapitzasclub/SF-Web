@@ -1,12 +1,13 @@
 <div class="card__container card__container--closed">
-  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+    preserveAspectRatio="xMidYMid slice">
     <defs>
       <clipPath id="clipPath-menorki">
         <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
         <circle class="clip" cx="960" cy="250" r="992"></circle>
       </clipPath>
     </defs>
-    <image clip-path="url(#clipPath-menorki)" width="1920" height="500" xlink:href="./app/html/members/menorki/menorki.png"></image>
+    <image clip-path="url(#clipPath-menorki)" width="1920" height="500" xlink:href="${ require('./menorki.png') }"></image>
   </svg>
   <div class="card__content">
     <i class="card__btn-close fa fa-times"></i>
@@ -16,7 +17,7 @@
     </div>
     <div class="card__copy">
       <div class="meta">
-        <img class="meta__avatar" src="./app/html/members/menorki/menorki-face.jpg" alt="menorki" />
+        <img class="meta__avatar" src="${ require('./menorki-face.jpg') }" alt="menorki" />
         <div class="meta__author">
           <h3 class="card__title">Menorki</h3>
           <small class="card__subtitle">Pasión por Arma 3</small>
@@ -27,8 +28,10 @@
       <p class="first">
         Menorki, el arnés de seguridad del grupo, inquebrantable y confiable.
       </p>
-      <p>Menorki es uno de los miembros más veteranos del clan y uno de los principales editores del mismo, aportando misiones variadas y de alta dificultad al clan.</p>
-      <p>Además de su trabajo de edición durante la estancia en la base, Menorki ha demostrado ser en el campo de batalla un líder y un ametrallador formidable, además de un médico de combate infalible y experto.</p>
+      <p>Menorki es uno de los miembros más veteranos del clan y uno de los principales editores del mismo, aportando misiones
+        variadas y de alta dificultad al clan.</p>
+      <p>Además de su trabajo de edición durante la estancia en la base, Menorki ha demostrado ser en el campo de batalla un
+        líder y un ametrallador formidable, además de un médico de combate infalible y experto.</p>
       <h4 class="mt-4">Méritos</h4>
       <hr>
       <div id="menorki_meritos" class="card-columns"></div>
