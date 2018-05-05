@@ -1,10 +1,9 @@
-export var navStack = [];
-export var fooNav;
+import FooNav from '../vendor/foonav/js/foonav.js';
 
 export function goTo(page, selector, goingBack) {
   // Si no se está volviendo se apila la pantalla
-  if (!goingBack && navStack[navStack.length - 1] !== page) {
-    navStack.push(page);
+  if (!goingBack && window.navStack[window.navStack.length - 1] !== page) {
+    window.navStack.push(page);
   }
 
   // Si no se quiere navegar a un subapartado se empieza arriba
@@ -22,7 +21,7 @@ export function goTo(page, selector, goingBack) {
   } else { // Navegar a otra pantalla
     bloquearPantalla();
 
-    setTimeout(function() {
+    setTimeout(function () {
       // Descargar el DOM
       dom[$('.page.show').attr('id')] = $('.page.show').detach();
       $('.footer').before(dom[page]);
@@ -30,14 +29,16 @@ export function goTo(page, selector, goingBack) {
       // Siempre se vuelve a la primera mision
       firstMission();
 
+      var title;
+
       if (page === 'main') {
         // Cambiar el historial
-        var title = 'Silver Force';
+        title = 'Silver Force';
         window.history.pushState(null, 'Silver Force', '/');
         document.title = title;
 
-        var navStack = ['main']
-        fooNav.m.set(null, fooNav.nav.hasClass('fon-open'));
+        window.navStack = ['main'];
+        window.fooNav.m.set(null, fooNav.nav.hasClass('fon-open'));
         $('#goBack').hide();
         $('.header').show();
         $('body').removeClass('noOverflow-Y');
@@ -49,12 +50,12 @@ export function goTo(page, selector, goingBack) {
         $('#members').find('#' + member + ' .card__image').trigger('click');
       } else {
         // Cambiar el historial
-        var title = 'Silver Force - ' + $('#' + page).data('title');
+        title = 'Silver Force - ' + $('#' + page).data('title');
         window.history.pushState(null, title, '#' + page);
         document.title = title;
 
         $('#goBack').show();
-        fooNav.m.set('#' + page, fooNav.nav.hasClass('fon-open'))
+        window.fooNav.m.set('#' + page, fooNav.nav.hasClass('fon-open'));
 
         if (page === 'missions') {
           $('.header').hide();
@@ -70,12 +71,12 @@ export function goTo(page, selector, goingBack) {
       $('.page.show').removeClass('show');
       $('#' + page).addClass('show');
 
-      setTimeout(function() {
+      setTimeout(function () {
         swingTo(selector);
 
         // Al navegar se cierra el menú si está abierto
         if ($('.fon-nav').hasClass('fon-open')) {
-          fooNav.toggle();
+          window.fooNav.toggle();
         }
 
         desbloquearPantalla();
@@ -85,12 +86,12 @@ export function goTo(page, selector, goingBack) {
 }
 
 export function goBack() {
-  var last = navStack.pop();
+  var last = window.navStack.pop();
   if (last.indexOf('members') > 0) {
-    navStack.push('members');
+    window.navStack.push('members');
     $('#members').find('#' + last.split('-')[0] + ' .card__btn-close').trigger('click');
   } else {
-    goTo(navStack[navStack.length - 1], 'body', true);
+    goTo(window.navStack[window.navStack.length - 1], 'body', true);
   }
 }
 
@@ -351,9 +352,10 @@ export function initNavigation() {
     theme: 'fon-dark'
   };
 
-  FooNav.init(fnavOptions).ready(function(nav) {
-    fooNav = nav;
+  FooNav.init(fnavOptions).ready(function (nav) {
+    window.fooNav = nav;
     nav.buttons.children(':last').before('<a id="goBack" class="fon-button fon-button-top fon-show" href="javascript:goBack();" style="display:none;"><span class="fon-button-icon fon-icon fon-icon-back"></span></a>');
-    fooNav.m.resize();
+    window.fooNav.m.resize();
   });
+  debugger;
 }

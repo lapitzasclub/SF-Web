@@ -112,6 +112,7 @@ export function _playSequence(isOpenClick, id, e) {
   });
 
   var tweenOtherCards = _showHideOtherCards(id);
+  var title;
 
   if (!card.isOpen) {
     // Open sequence.
@@ -119,13 +120,13 @@ export function _playSequence(isOpenClick, id, e) {
     sequence.add(card.openCard(_onCardMove), 0);
 
     // Cambiar el historial
-    var title = 'Silver Force - ' + $('#members').data('title') + ' - ' + $('#members').find('#' + card._el.id).data('title');
+    title = 'Silver Force - ' + $('#members').data('title') + ' - ' + $('#members').find('#' + card._el.id).data('title');
     window.history.pushState(null, title, '#' + card._el.id + '-members');
     document.title = title;
-    navStack = ['main', card._el.id + '-members'];
+    window.navStack = ['main', card._el.id + '-members'];
 
     $('#goBack').show();
-    fooNav.m.set('#members', fooNav.nav.hasClass('fon-open'))
+    window.fooNav.m.set('#members', fooNav.nav.hasClass('fon-open'));
     $('.header').hide();
     $('body').removeClass('noOverflow-Y');
     $('.footer').show();
@@ -140,10 +141,10 @@ export function _playSequence(isOpenClick, id, e) {
     sequence.add(tweenOtherCards, position);
 
     // Cambiar el historial
-    var title = 'Silver Force - ' + $('#members').data('title');
+    title = 'Silver Force - ' + $('#members').data('title');
     window.history.pushState(null, title, '#members');
     document.title = title;
-    navStack = ['main', 'members'];
+    window.navStack = ['main', 'members'];
   }
 
   sequence.play();
@@ -156,7 +157,7 @@ export function _playSequence(isOpenClick, id, e) {
  */
 export function _showHideOtherCards(id) {
 
-  var TL = new TimelineLite;
+  var TL = new TimelineLite();
 
   var selectedCard = layout[id].card;
 

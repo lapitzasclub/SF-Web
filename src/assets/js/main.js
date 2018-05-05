@@ -18,7 +18,6 @@ import '../vendor/hammerjs/hammer-time.min.js';
 import '../vendor/TweenMax.min.js';
 import '../vendor/CSSRulePlugin.min.js';
 import '../vendor/sweetalert/sweetalert.min.js';
-import FooNav from '../vendor/foonav/js/foonav.js';
 import '../vendor/isInViewport.js';
 import '../vendor/tether/tether.min.js';
 import '../vendor/bootstrap-calendar/js/calendar.js';
@@ -54,7 +53,8 @@ window._ = underscore;
 window.bloquearPantalla = silverForce.bloquearPantalla;
 window.desbloquearPantalla = silverForce.desbloquearPantalla;
 window.swingTo = silverForce.swingTo;
-window.FooNav = FooNav;
+window.fooNav = null;
+window.navStack = [];
 window.goTo = navOptions.goTo;
 window.goBack = navOptions.goBack;
 window.dom = {
@@ -95,7 +95,7 @@ $(function () {
     });
 
     navOptions.initNavigation();
-    navOptions.navStack.push('main');
+    window.navStack.push('main');
 
     $(window).scroll(function () {
         $('#main video').each(function () {
