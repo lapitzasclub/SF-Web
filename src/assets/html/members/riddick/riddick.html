@@ -1,0 +1,49 @@
+<div class="card__container card__container--closed">
+  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+    preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <clipPath id="clipPath-riddick">
+        <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+        <circle class="clip" cx="960" cy="250" r="992"></circle>
+      </clipPath>
+    </defs>
+    <image clip-path="url(#clipPath-riddick)" width="1920" height="500" xlink:href="${ require('./riddick.jpg') }"></image>
+  </svg>
+  <div class="card__content">
+    <i class="card__btn-close fa fa-times"></i>
+    <div class="card__caption">
+      <h2 class="card__title">Riddick</h2>
+      <p class="card__subtitle">Be silver my friend</p>
+    </div>
+    <div class="card__copy">
+      <div class="meta">
+        <img class="meta__avatar" src="${ require('./riddick-face.jpg') }" alt="riddick" />
+        <div class="meta__author">
+          <h3 class="card__title">Riddick</h3>
+          <small class="card__subtitle">Be silver my friend</small>
+        </div>
+        <!-- <span class="meta__date">06/16/2015</span> -->
+      </div>
+
+      <p class="first">
+        Adaptación a cualquier circunstancia.
+      </p>
+      <p>Riddick es miembro de Silver Force en proceso de adaptación y aprendizaje. Su objetivo y motivación es adquirir la
+        máxima cantidad de formación y experiencia para desempeñar un roll definido en su trayectoria, y para ello, se adapta
+        a las circunstancias más exigentes que pueda ofrecer Arma 3.</p>
+      <p>Está involucrado y comprometido con la causa, a pesar de su poca disponibilidad de tiempo, elabora tutoriales, está
+        en fase de aprendizaje en edición de misiones y sube vídeos a redes sociales para promocionar el clan.</p>
+      <p>Si eres plata y repartes plomo, te conviertes en Silver Force. Be Silver My Friend!!!</p>
+
+      <div class="social-btns mt-4">
+        <a class="btn youtube" href="https://www.youtube.com/channel/UCN-c7xb4H2SN1otMCdNmleg">
+          <i class="fa fa-youtube"></i>
+        </a>
+      </div>
+
+      <h4 class="mt-4">Méritos</h4>
+      <hr>
+      <div id="riddick_meritos" class="card-columns"></div>
+    </div>
+  </div>
+</div>

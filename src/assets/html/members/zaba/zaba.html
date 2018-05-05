@@ -1,0 +1,43 @@
+<div class="card__container card__container--closed">
+  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+    preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <clipPath id="clipPath-zaba">
+        <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+        <circle class="clip" cx="960" cy="250" r="992"></circle>
+      </clipPath>
+    </defs>
+    <image clip-path="url(#clipPath-zaba)" width="1920" height="500" xlink:href="${ require('./zaba.jpg') }"></image>
+  </svg>
+  <div class="card__content">
+    <i class="card__btn-close fa fa-times"></i>
+    <div class="card__caption">
+      <h2 class="card__title">Zaba</h2>
+      <p class="card__subtitle">¿Tiempo para la detonación?</p>
+    </div>
+    <div class="card__copy">
+      <div class="meta">
+        <img class="meta__avatar" src="${ require('./zaba-face.jpg') }" alt="zaba" />
+        <div class="meta__author">
+          <h3 class="card__title">Zaba</h3>
+          <small class="card__subtitle">¿Tiempo para la detonación?</small>
+        </div>
+        <!-- <span class="meta__date">06/16/2015</span> -->
+      </div>
+
+      <p class="first">Uno de los veteranos del clan Silver Force. Amante de los clásicos: WW2 y Vietnam.</p>
+      <p>Todas las mañanas se levanta con Good Morning Vietnam mientras desayuna Napalm con cereales. Zaba es la peor pesadilla
+        de los charlies.</p>
+      <p>Además de ser miembro del equipo de administradores, Zaba aporta al clan sus conocimientos avanzados en edición de
+        misiones.</p>
+      <p>
+        Un soldado preparado para desempeñar cualquier rol en el campo de batalla y con cierta debilidad por todo lo que hace BOOM.
+        <br> Un compañero de armas que cubrirá tus espaldas.
+      </p>
+
+      <h4 class="mt-4">Méritos</h4>
+      <hr>
+      <div id="zaba_meritos" class="card-columns"></div>
+    </div>
+  </div>
+</div>
