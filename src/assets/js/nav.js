@@ -357,5 +357,4 @@ export function initNavigation() {
     nav.buttons.children(':last').before('<a id="goBack" class="fon-button fon-button-top fon-show" href="javascript:goBack();" style="display:none;"><span class="fon-button-icon fon-icon fon-icon-back"></span></a>');
     window.fooNav.m.resize();
   });
-  debugger;
 }

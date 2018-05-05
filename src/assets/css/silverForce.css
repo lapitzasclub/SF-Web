@@ -40,6 +40,7 @@ body:after {
 }
 
 body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #1c1817;
 }
@@ -102,6 +103,8 @@ body::-webkit-scrollbar-thumb {
   width: 37px;
   height: auto;
   margin-top: -1px;
+  display: inline-block;
+  margin: 0 1rem;
 }
 
 .sweet-alert hr {
@@ -463,6 +466,7 @@ hr.small {
 }
 
 .fon-nav-inner::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #bebebe;
 }

@@ -1,4 +1,5 @@
 import moment from 'moment-timezone';
+import * as silverForce from './silverForce.js';
 
 export var options = {
   language: 'es-ES',
@@ -43,7 +44,7 @@ export function getSteamGroupEvents(from, to) {
     var endMonth = year == to.getFullYear() ? to.getMonth() : 11;
     // Se recorren los meses del intervalo
     for (var month = from.getMonth(); month <= endMonth; month++) {
-      var xmlSource = 'http://steamcommunity.com/gid/103582791440841071/events?xml=1&action=eventFeed&month=' + (month + 1) + '&year=' + year
+      var xmlSource = 'http://steamcommunity.com/gid/103582791440841071/events?xml=1&action=eventFeed&month=' + (month + 1) + '&year=' + year;
 
       // build the yql query. Could be just a string - I think join makes easier reading
       var yqlURL = [
@@ -106,14 +107,15 @@ export function getSteamGroupEvents(from, to) {
           var hours = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(0, 2);
           var minutes = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(3, 2);
           var pm = $($(e).find('.eventDateBlock').find('span')[1]).text().substr(5, 2);
+          var hours24;
 
           if (pm === 'pm') {
             if (hours !== '12') {
-              var hours24 = parseInt(hours) + 12;
+              hours24 = parseInt(hours) + 12;
               hours = String("0" + hours24).slice(-2);
             }
           } else if (hours === '12') {
-            var hours24 = 0;
+            hours24 = 0;
           }
 
           var completa = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;
@@ -222,7 +224,7 @@ export function fncCalendarButtons() {
 
 export function fncNextEvent(event, date, end) {
   if (date == null) {
-    date = new Date;
+    date = new Date();
   }
   if (end == null) {
     end = 11;
@@ -241,7 +243,7 @@ export function fncNextEvent(event, date, end) {
 
   // Now do the AJAX heavy lifting
   $.getJSON(yqlURL, function (data) {
-    xmlContent = $(data.results[0]);
+    var xmlContent = $(data.results[0]);
     var nextEvent = $(xmlContent).find("event:first");
     var month = moment($(data.results[0]).find('monthName').html().split(/[\[\]]/)[2], 'MMMM').format('MM');
     var year = moment($(data.results[0]).find('year').html().split(/[\[\]]/)[2], 'YYYY').format('YYYY');
@@ -257,14 +259,15 @@ export function fncNextEvent(event, date, end) {
     var hours = $(nextEvent.find('.eventDateBlock').find('span')[1]).text().substr(0, 2);
     var minutes = $(nextEvent.find('.eventDateBlock').find('span')[1]).text().substr(3, 2);
     var pm = $(nextEvent.find('.eventDateBlock').find('span')[1]).text().substr(5, 2);
+    var hours24;
 
     if (pm === 'pm') {
       if (hours !== '12') {
-        var hours24 = parseInt(hours) + 12;
+        hours24 = parseInt(hours) + 12;
         hours = String("0" + hours24).slice(-2);
       }
     } else if (hours === '12') {
-      var hours24 = 0;
+      hours24 = 0;
     }
 
     var completa = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;
@@ -273,8 +276,11 @@ export function fncNextEvent(event, date, end) {
 
     var timeEsTxt = timeES.format('DD/MM/YYYY HH:mm');
 
+    var soldierR = require('../img/soldierR.png');
+    var soldierL = require('../img/soldierL.png');
+
     swal({
-      title: '<img src="./app/img/soldierR.png"/>PRÓXIMA BATALLA<img src="./app/img/soldierL.png"/><hr/>',
+      title: '<img src="' + soldierR + '"/>PRÓXIMA BATALLA<img src="' + soldierL + '"/><hr/>',
       text: '<h4><strong>' + timeEsTxt + ' - </strong><small>' + nextEvent.find('.eventBlockTitle a').html() + '</small></h4>' +
         '<a id="lnkVerPlan" href="#events">Ver el plan de batallas</a>',
       html: true,
@@ -289,7 +295,7 @@ export function fncNextEvent(event, date, end) {
       window.location.href = encodeURI('https://calendar.google.com/calendar/r/eventedit?text=Silver Force&dates=' + year + month + day + 'T' + (Number(hoursEs) - 1) + minutes + '00Z/' + year + month + day + 'T' + (Number(hoursEs) + 1) + minutes + '00Z' + '&details=' + nextEvent.find('.eventBlockTitle a').html() + '&location=&sf=true&output=xml');
     });
 
-    fncProcessLinks2Hash('#lnkVerPlan');
+    silverForce.fncProcessLinks2Hash('#lnkVerPlan');
   });
 }
 
