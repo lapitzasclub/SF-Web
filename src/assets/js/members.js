@@ -277,7 +277,7 @@ export function initMembers() {
       logros: ['1y', 'inteligencia', 'propaganda', 'mando_exp', 'tirador_exp', 'mecanizada_exp', 'orientacion', 'cqb_exp', 'medico_exp']
     },
     menorki: {
-      logros: ['1y', 'inteligencia', 'mando_exp', 'medico_exp', 'cqb_exp', 'orientacion']
+      logros: ['1y', 'inteligencia', 'mando_exp', 'medico_exp', 'cqb_exp', 'orientacion', 'rto']
     },
     lea: {
       logros: ['1y', 'medico']
@@ -287,9 +287,6 @@ export function initMembers() {
     },
     riddick: {
       logros: ['propaganda', 'medico_exp', 'cqb', 'orientacion']
-    },
-    khuru: {
-      logros: ['inteligencia', 'propaganda', 'mando', 'medico_exp', 'cqb', 'orientacion']
     },
     charlie: {
       logros: ['medico']
@@ -307,7 +304,7 @@ export function initMembers() {
       logros: []
     },
     jota: {
-      logros: ['medico_exp', 'cqb']
+      logros: ['medico_exp', 'cqb', 'rto']
     },
     cristian: {
       logros: []
@@ -316,10 +313,13 @@ export function initMembers() {
       logros: []
     },
     tito: {
-      logros: ['cqb']
+      logros: ['mando_exp', 'cqb']
     },
     kiro: {
       logros: ['cqb']
+    },
+    joe: {
+      logros: ['']
     }
   };
 
