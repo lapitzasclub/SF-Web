@@ -275,6 +275,11 @@ hr.small {
   margin-top: -6px;
 }
 
+.galeria .links img {
+  height: 6rem;
+  width: 6rem;
+}
+
 /* Events */
 
 .events {

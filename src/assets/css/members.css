@@ -357,7 +357,7 @@ body.body--hidden {
 @import '//codepen.io/chrisdothtml/pen/ojLzJK.css';
 .social-btns .btn,
 .social-btns .btn:before,
-.social-btns .btn .fa {
+.social-btns .btn svg {
   transition: all 0.35s;
   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
@@ -367,7 +367,7 @@ body.body--hidden {
   left: -110%;
 }
 
-.social-btns .btn .fa {
+.social-btns .btn svg {
   transform: scale(0.8);
 }
 
@@ -375,7 +375,7 @@ body.body--hidden {
   background-color: #3b5998;
 }
 
-.social-btns .btn.facebook .fa {
+.social-btns .btn.facebook svg {
   color: #3b5998;
 }
 
@@ -383,7 +383,7 @@ body.body--hidden {
   background-color: #3cf;
 }
 
-.social-btns .btn.twitter .fa {
+.social-btns .btn.twitter svg {
   color: #3cf;
 }
 
@@ -391,7 +391,7 @@ body.body--hidden {
   background-color: #dc4a38;
 }
 
-.social-btns .btn.google .fa {
+.social-btns .btn.google svg {
   color: #dc4a38;
 }
 
@@ -399,7 +399,7 @@ body.body--hidden {
   background-color: #ff0000;
 }
 
-.social-btns .btn.youtube .fa {
+.social-btns .btn.youtube svg {
   color: #ff0000;
 }
 
@@ -407,7 +407,7 @@ body.body--hidden {
   background-color: #f26798;
 }
 
-.social-btns .btn.dribbble .fa {
+.social-btns .btn.dribbble svg {
   color: #f26798;
 }
 
@@ -415,7 +415,7 @@ body.body--hidden {
   background-color: #00aff0;
 }
 
-.social-btns .btn.skype .fa {
+.social-btns .btn.skype svg {
   color: #00aff0;
 }
 
@@ -423,7 +423,7 @@ body.body--hidden {
   background-color: #000;
 }
 
-.social-btns .btn.steam .fa {
+.social-btns .btn.steam svg {
   color: #000;
 }
 
@@ -433,8 +433,8 @@ body.body--hidden {
   left: -10%;
 }
 
-.social-btns .btn:focus .fa,
-.social-btns .btn:hover .fa {
+.social-btns .btn:focus svg,
+.social-btns .btn:hover svg {
   color: #fff;
   transform: scale(1);
 }
@@ -473,7 +473,7 @@ body.body--hidden {
   transform: rotate(45deg);
 }
 
-.social-btns .btn .fa {
+.social-btns .btn svg {
   font-size: 38px;
   vertical-align: middle;
 }
