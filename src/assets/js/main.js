@@ -34,6 +34,30 @@ import * as steamEvents from './steamEvents.js';
 import * as members from './members.js';
 import * as missions from './missions.js';
 
+import fontawesome from '@fortawesome/fontawesome';
+import farEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
+import farCircle from '@fortawesome/fontawesome-free-regular/faCircle';
+import fabDiscord from '@fortawesome/fontawesome-free-brands/faDiscord';
+import fabGooglePlus from '@fortawesome/fontawesome-free-brands/faGooglePlus';
+import fabSteam from '@fortawesome/fontawesome-free-brands/faSteam';
+import fabYoutube from '@fortawesome/fontawesome-free-brands/faYoutube';
+import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter';
+import fasCircle from '@fortawesome/fontawesome-free-solid/faCircle';
+import fasUser from '@fortawesome/fontawesome-free-solid/faUser';
+import fasUsers from '@fortawesome/fontawesome-free-solid/faUsers';
+import fasCompass from '@fortawesome/fontawesome-free-solid/faCompass';
+import fasBinoculars from '@fortawesome/fontawesome-free-solid/faBinoculars';
+import fasSitemap from '@fortawesome/fontawesome-free-solid/faSitemap';
+import fasArrowLeft from '@fortawesome/fontawesome-free-solid/faArrowLeft';
+import fasArrowRight from '@fortawesome/fontawesome-free-solid/faArrowRight';
+import fasEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
+import fasTimes from '@fortawesome/fontawesome-free-solid/faTimes';
+
+fontawesome.library.add(
+    farEnvelope, farCircle, fabSteam, fabYoutube, fabDiscord, fabGooglePlus,
+    faTwitter, fasUser, fasUsers, fasCompass, fasBinoculars, fasSitemap,
+    fasArrowLeft, fasArrowRight, fasEnvelope, fasTimes);
+
 window.tmpls = {
     'day': require('html-loader!../vendor/bootstrap-calendar/tmpls/day.html'),
     'week': require('html-loader!../vendor/bootstrap-calendar/tmpls/week.html'),

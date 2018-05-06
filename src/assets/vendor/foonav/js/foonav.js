@@ -46,7 +46,7 @@ var FooNav = {
 				icon: 'fon-icon-home'
 			},
 			menu: {
-				family: 'fa',
+				family: 'fas',
 				icon: 'fa-sitemap'
 			},
 			top: {

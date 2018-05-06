@@ -42,7 +42,8 @@ export function bloquearPantalla() {
       ease: Power2.easeOut
     }, 'close')
     .to($('.loading'), 0.2, {
-      opacity: 1
+      opacity: 1,
+      'z-index': 500
     });
 }
 
@@ -62,6 +63,7 @@ export function desbloquearPantalla() {
       ease: Power2.easeOut
     }, '-=0.2', 'open')
     .to($('.loading'), 0.2, {
-      opacity: 0
+      opacity: 0,
+      'z-index': -1
     }, '-=0.2');
 }

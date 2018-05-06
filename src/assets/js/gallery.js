@@ -80,7 +80,7 @@ function fncGetAllPhotosList(photos, page) {
                 var linksContainer = $('#links');
                 var baseUrl;
                 photos.sort(sortByProperty('views'));
-                photos = photos.slice(0,150);
+                photos = photos.slice(0,55);
                 $.each(photos, function(index, photo) {
                     baseUrl = 'https://farm' + photo.farm + '.static.flickr.com/' +
                         photo.server + '/' + photo.id + '_' + photo.secret;
