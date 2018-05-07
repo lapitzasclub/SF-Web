@@ -5,6 +5,7 @@ import '../vendor/blueimp-gallery/js/blueimp-gallery-video.js';
 import '../vendor/blueimp-gallery/js/blueimp-gallery-vimeo.js';
 import '../vendor/blueimp-gallery/js/blueimp-gallery-youtube.js';
 import '../vendor/blueimp-gallery/js/jquery.blueimp-gallery.min.js';
+import '../vendor/blueimp-gallery/js/blueimp-helper.js';
 
 import c1 from '../img/gallery/carousel/0001.jpg';
 import c2 from '../img/gallery/carousel/0012.jpg';

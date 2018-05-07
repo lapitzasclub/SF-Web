@@ -1,3 +1,7 @@
+import * as Trianglify from '../vendor/trianglify.min.js';
+import '../vendor/ScrollToPlugin.min.js';
+import * as cardCircle from '../vendor/Card-circle.js';
+
 export var logros = {};
 
 /**
@@ -77,7 +81,7 @@ export function _bindCards() {
 
   $.each(elements, function (i, card) {
 
-    var instance = new Card(i, card);
+    var instance = new cardCircle.Card(i, card);
 
     layout[i] = {
       card: instance
