@@ -271,6 +271,9 @@ export function initMembers() {
     zaba: {
       logros: ['2y', 'inteligencia', 'mando', 'medico', 'cqb']
     },
+    oriol: {
+      logros: ['2y']
+    },
     dami: {
       logros: ['2y', 'medico', 'cqb', 'mecanizada']
     },
@@ -286,20 +289,14 @@ export function initMembers() {
     lea: {
       logros: ['1y', 'medico']
     },
-    oriol: {
-      logros: []
-    },
     riddick: {
-      logros: ['propaganda', 'medico_exp', 'cqb', 'orientacion']
+      logros: ['6m', 'propaganda', 'medico_exp', 'cqb', 'orientacion']
     },
     charlie: {
-      logros: ['medico']
+      logros: ['6m', 'medico']
     },
     asasinblack: {
       logros: []
-    },
-    lluis: {
-      logros: ['cqb']
     },
     rod: {
       logros: ['cqb']
@@ -314,7 +311,7 @@ export function initMembers() {
       logros: []
     },
     chicho98: {
-      logros: []
+      logros: ['medico']
     },
     tito: {
       logros: ['mando_exp', 'cqb']

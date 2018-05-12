@@ -148,6 +148,10 @@ export function initNavigation() {
         onclick: "goTo('zaba-members')",
         text: 'Zaba'
       }, {
+        href: '#oriol',
+        onclick: "goTo('oriol-members')",
+        text: 'Oriol'
+      }, {
         href: '#dami',
         onclick: "goTo('dami-members')",
         text: 'Dami'
@@ -168,10 +172,6 @@ export function initNavigation() {
         onclick: "goTo('lea-members')",
         text: 'Lea'
       }, {
-        href: '#oriol',
-        onclick: "goTo('oriol-members')",
-        text: 'Oriol'
-      }, {
         href: '#riddick',
         onclick: "goTo('riddick-members')",
         text: 'Riddick'
@@ -187,10 +187,6 @@ export function initNavigation() {
         href: '#asasinblack',
         onclick: "goTo('asasinblack-members')",
         text: 'Asasinblack'
-      }, {
-        href: '#lluis',
-        onclick: "goTo('lluis-members')",
-        text: 'Lluis'
       }, {
         href: '#rod',
         onclick: "goTo('rod-members')",
