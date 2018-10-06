@@ -292,23 +292,11 @@ export function initMembers() {
     riddick: {
       logros: ['6m', 'propaganda', 'medico_exp', 'cqb', 'orientacion']
     },
-    charlie: {
-      logros: ['6m', 'medico']
-    },
-    asasinblack: {
-      logros: []
-    },
-    rod: {
-      logros: ['cqb']
-    },
     pitofloro: {
       logros: []
     },
     jota: {
       logros: ['medico_exp', 'cqb', 'rto']
-    },
-    cristian: {
-      logros: []
     },
     chicho98: {
       logros: ['medico']
@@ -316,10 +304,13 @@ export function initMembers() {
     tito: {
       logros: ['mando_exp', 'cqb']
     },
-    kiro: {
-      logros: ['cqb']
+    andreu: {
+      logros: ['']
     },
-    joe: {
+    shinda: {
+      logros: ['']
+    },
+    nielfox: {
       logros: ['']
     }
   };

@@ -180,18 +180,6 @@ export function initNavigation() {
         onclick: "goTo('khuru-members')",
         text: 'Khuru'
       }, {
-        href: '#charlie',
-        onclick: "goTo('charlie-members')",
-        text: 'CharlieGlasgow'
-      }, {
-        href: '#asasinblack',
-        onclick: "goTo('asasinblack-members')",
-        text: 'Asasinblack'
-      }, {
-        href: '#rod',
-        onclick: "goTo('rod-members')",
-        text: 'Rod'
-      }, {
         href: '#pitofloro',
         onclick: "goTo('pitofloro-members')",
         text: 'Dani (Pitofloro)'
@@ -199,10 +187,6 @@ export function initNavigation() {
         href: '#jota',
         onclick: "goTo('jota-members')",
         text: 'Jota'
-      }, {
-        href: '#cristian',
-        onclick: "goTo('cristian-members')",
-        text: 'Cristian'
       }, {
         href: '#chicho98',
         onclick: "goTo('chicho98-members')",
@@ -212,9 +196,17 @@ export function initNavigation() {
         onclick: "goTo('tito-members')",
         text: 'Tito'
       }, {
-        href: '#kiro',
-        onclick: "goTo('kiro-members')",
-        text: 'Kiro'
+        href: '#andreu',
+        onclick: "goTo('andreu-members')",
+        text: 'Andreu'
+      }, {
+        href: '#shinda',
+        onclick: "goTo('shinda-members')",
+        text: 'Shinda'
+      }, {
+        href: '#nielfox',
+        onclick: "goTo('nielfox-members')",
+        text: 'NielFox'
       }]
     }, {
       href: '#missions',
