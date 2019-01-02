@@ -301,6 +301,10 @@ export function initNavigation() {
         href: '#valleyOfTheDamned',
         onclick: "goTo('valleyOfTheDamned')",
         text: 'Valley of the damned'
+      }, {
+        href: '#opPreacher',
+        onclick: "goTo('opPreacher')",
+        text: 'Op. preacher'
       }]
     }, {
       href: '#portfolio',

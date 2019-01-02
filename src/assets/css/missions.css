@@ -461,6 +461,10 @@
   background-image: url(../html/missions/valleyOfTheDamned/valleyOfTheDamned_01.png);
 }
 
+.background.opPreacher {
+  background-image: url(../html/missions/opPreacher/opPreacher_01.jpg);
+}
+
 .carousel .carousel-item {
   -webkit-background-size: cover;
   -moz-background-size: cover;
