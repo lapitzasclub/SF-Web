@@ -10,7 +10,7 @@ module.exports = merge(common, {
         contentBase: path.resolve(__dirname, 'dist'),
         port: 9000,
         disableHostCheck: true,
-        host: '127.0.0.1',
+        host: '0.0.0.0',
     },
     plugins: []
 });
