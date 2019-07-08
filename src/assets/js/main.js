@@ -19,7 +19,7 @@ import '../vendor/tether/tether.min.js';
 import * as silverForce from './silverForce.js';
 import * as navOptions from './nav.js';
 import * as gallery from './gallery.js';
-import * as steamEvents from './steamEvents.js';
+// import * as steamEvents from './steamEvents.js';
 import * as members from './members.js';
 import * as missions from './missions.js';
 
@@ -112,7 +112,7 @@ $(function () {
             .css('right', -$('.fon-nav').outerWidth());
     });
 
-    $('#imgLogo').on('click', steamEvents.fncNextEvent);
+    // $('#imgLogo').on('click', steamEvents.fncNextEvent);
 
     $('video').on('click', function () {
         $(this)[0].play();
@@ -123,7 +123,7 @@ $(function () {
     silverForce.fncProcessLinks2Hash();
 
     gallery.initGallery('#blueimp-image-carousel');
-    steamEvents.initSteamEvents();
+    // steamEvents.initSteamEvents();
     members.initMembers();
     missions.initMissions();
 

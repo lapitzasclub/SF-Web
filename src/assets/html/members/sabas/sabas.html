@@ -1,0 +1,36 @@
+<div class="card__container card__container--closed">
+  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+    preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <clipPath id="clipPath-sabas">
+        <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+        <circle class="clip" cx="960" cy="250" r="992"></circle>
+      </clipPath>
+    </defs>
+    <image clip-path="url(#clipPath-sabas)" width="1920" height="500" xlink:href="${ require('./sabas.jpg') }"></image>
+  </svg>
+  <div class="card__content">
+    <span class="card__btn-close"><i class="fas fa-times"></i></span>
+    <div class="card__caption">
+      <h2 class="card__title">SabaS</h2>
+      <p class="card__subtitle">Más balaaaaaasssss!!!!!!</p>
+    </div>
+    <div class="card__copy">
+      <div class="meta">
+        <img class="meta__avatar" src="${ require('./sabas-face.jpg') }" alt="sabas" />
+        <div class="meta__author">
+          <h3 class="card__title">SabaS</h3>
+          <small class="card__subtitle">Más balaaaaaasssss!!!!!!</small>
+        </div>
+        <!-- <span class="meta__date">06/16/2015</span> -->
+      </div>
+
+      <p class="first">Mi habilidad, como la de cualquier soldado, lo que ordenen.</p>
+      <p>Pero si me dan a elegir, ametralladora con muchas balas!!!! Y los helis.</p>
+
+      <h4 class="mt-4">Méritos</h4>
+      <hr>
+      <div id="sabas_meritos" class="card-columns"></div>
+    </div>
+  </div>
+</div>
