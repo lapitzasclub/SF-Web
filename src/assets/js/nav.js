@@ -148,6 +148,10 @@ export function initNavigation() {
         onclick: "goTo('zaba-members')",
         text: 'Zaba'
       }, {
+        href: '#oriol',
+        onclick: "goTo('oriol-members')",
+        text: 'Oriol'
+      }, {
         href: '#dami',
         onclick: "goTo('dami-members')",
         text: 'Dami'
@@ -168,10 +172,6 @@ export function initNavigation() {
         onclick: "goTo('lea-members')",
         text: 'Lea'
       }, {
-        href: '#oriol',
-        onclick: "goTo('oriol-members')",
-        text: 'Oriol'
-      }, {
         href: '#riddick',
         onclick: "goTo('riddick-members')",
         text: 'Riddick'
@@ -179,22 +179,6 @@ export function initNavigation() {
         href: '#khuru',
         onclick: "goTo('khuru-members')",
         text: 'Khuru'
-      }, {
-        href: '#charlie',
-        onclick: "goTo('charlie-members')",
-        text: 'CharlieGlasgow'
-      }, {
-        href: '#asasinblack',
-        onclick: "goTo('asasinblack-members')",
-        text: 'Asasinblack'
-      }, {
-        href: '#lluis',
-        onclick: "goTo('lluis-members')",
-        text: 'Lluis'
-      }, {
-        href: '#rod',
-        onclick: "goTo('rod-members')",
-        text: 'Rod'
       }, {
         href: '#pitofloro',
         onclick: "goTo('pitofloro-members')",
@@ -204,10 +188,6 @@ export function initNavigation() {
         onclick: "goTo('jota-members')",
         text: 'Jota'
       }, {
-        href: '#cristian',
-        onclick: "goTo('cristian-members')",
-        text: 'Cristian'
-      }, {
         href: '#chicho98',
         onclick: "goTo('chicho98-members')",
         text: 'Chicho98'
@@ -216,9 +196,17 @@ export function initNavigation() {
         onclick: "goTo('tito-members')",
         text: 'Tito'
       }, {
-        href: '#kiro',
-        onclick: "goTo('kiro-members')",
-        text: 'Kiro'
+        href: '#andreu',
+        onclick: "goTo('andreu-members')",
+        text: 'Andreu'
+      }, {
+        href: '#shinda',
+        onclick: "goTo('shinda-members')",
+        text: 'Shinda'
+      }, {
+        href: '#nielfox',
+        onclick: "goTo('nielfox-members')",
+        text: 'NielFox'
       }]
     }, {
       href: '#missions',
@@ -313,6 +301,10 @@ export function initNavigation() {
         href: '#valleyOfTheDamned',
         onclick: "goTo('valleyOfTheDamned')",
         text: 'Valley of the damned'
+      }, {
+        href: '#opPreacher',
+        onclick: "goTo('opPreacher')",
+        text: 'Op. preacher'
       }]
     }, {
       href: '#portfolio',

@@ -74,35 +74,11 @@
 		<icq>N/A</icq>
 		<remark>La adicción a las explosiones y a la morfina definen mi personalidad</remark>
 	</member>
-	<member id="76561198159117294" nick="Asasinblack">
-		<name>Asasinblack</name>
-		<email></email>
-		<icq>N/A</icq>
-		<remark>Sólo los muertos han visto el final de la guerra</remark>
-	</member>
-	<member id="76561198393190999" nick="Lluis">
-		<name>Lluis</name>
-		<email></email>
-		<icq>N/A</icq>
-		<remark>¿Metralla en la cabeza? No hay problema</remark>
-	</member>
-	<member id="76561198077313668" nick="Rod">
-		<name>Rodrino</name>
-		<email></email>
-		<icq>N/A</icq>
-		<remark>Un grano no hace granero, pero ayuda al compañero</remark>
-	</member>
 	<member id="76561198083840050" nick="Dani">
 		<name>Dani (Pitofloro)</name>
 		<email></email>
 		<icq>N/A</icq>
 		<remark>Vamos a partir a la mitad a esos malnacidos</remark>
-	</member>
-	<member id="76561197989240570" nick="CharlieGlasgow">
-		<name>Charlie</name>
-		<email></email>
-		<icq>N/A</icq>
-		<remark></remark>
 	</member>
 	<member id="76561198089666461" nick="Chimi">
 		<name>Chimi</name>
@@ -114,7 +90,7 @@
 		<name>Jota</name>
 		<email></email>
 		<icq>N/A</icq>
-		<remark>Todos Somos un mismo compañero, nadie queda atrás</remark>
+		<remark>Todos Somos un mismo compaï¿½ero, nadie queda atrï¿½s</remark>
 	</member>
 	<member id="76561198082275149" nick="Chicho98">
 		<name>Chicho</name>
@@ -128,10 +104,22 @@
 		<icq>N/A</icq>
 		<remark>Si fuera seguro lo haría cualquiera</remark>
 	</member>
-	<member id="76561198139324529" nick="Kiro">
-		<name>Kiro</name>
+	<member id="76561198299251420" nick="Andreu">
+		<name>Andreu</name>
 		<email></email>
 		<icq>N/A</icq>
-		<remark></remark>
+		<remark>¿Una retirada a tiempo es una victoria? Eso no funciona así.</remark>
+	</member>
+	<member id="76561198093041671" nick="Sinda">
+		<name>Eduardo</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>QUIEREN GRITO DE GUERRA?! PUES GRITAR COMO HOMBRES!</remark>
+	</member>
+	<member id="76561198019683043" nick="NielFox">
+		<name>Miguel</name>
+		<email></email>
+		<icq>N/A</icq>
+		<remark>Vae victis!</remark>
 	</member>
 </squad>

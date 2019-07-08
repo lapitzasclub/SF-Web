@@ -2,11 +2,6 @@
 /* global window */
 'use strict';
 
-//check the environment
-// if (process.env.NODE_ENV !== 'production') {
-//     console.log('Looks like we are in development mode!');
-// }
-
 // import CSS
 import scss from '../css/sass.scss';
 
@@ -20,12 +15,6 @@ import '../vendor/CSSRulePlugin.min.js';
 import '../vendor/sweetalert/sweetalert.min.js';
 import '../vendor/isInViewport.js';
 import '../vendor/tether/tether.min.js';
-import '../vendor/bootstrap-calendar/js/calendar.js';
-import '../vendor/bootstrap-calendar/js/calendar-language_es-ES.js';
-import '../vendor/blueimp-gallery/js/blueimp-helper.js';
-import * as trianglify from '../vendor/trianglify.min.js';
-import '../vendor/ScrollToPlugin.min.js';
-import * as cardCircle from '../vendor/Card-circle.js';
 
 import * as silverForce from './silverForce.js';
 import * as navOptions from './nav.js';
@@ -58,20 +47,6 @@ fontawesome.library.add(
     faTwitter, fasUser, fasUsers, fasCompass, fasBinoculars, fasSitemap,
     fasArrowLeft, fasArrowRight, fasEnvelope, fasTimes);
 
-window.tmpls = {
-    'day': require('html-loader!../vendor/bootstrap-calendar/tmpls/day.html'),
-    'week': require('html-loader!../vendor/bootstrap-calendar/tmpls/week.html'),
-    'week-days': require('html-loader!../vendor/bootstrap-calendar/tmpls/week-days.html'),
-    'month': require('html-loader!../vendor/bootstrap-calendar/tmpls/month.html'),
-    'month-day': require('html-loader!../vendor/bootstrap-calendar/tmpls/month-day.html'),
-    'year': require('html-loader!../vendor/bootstrap-calendar/tmpls/year.html'),
-    'year-month': require('html-loader!../vendor/bootstrap-calendar/tmpls/year-month.html'),
-    'events-list': require('html-loader!../vendor/bootstrap-calendar/tmpls/events-list.html'),
-    'modal': require('html-loader!../vendor/bootstrap-calendar/tmpls/modal.html')
-};
-
-window.Trianglify = trianglify;
-window.Card = cardCircle.Card;
 window._ = underscore;
 
 window.bloquearPantalla = silverForce.bloquearPantalla;

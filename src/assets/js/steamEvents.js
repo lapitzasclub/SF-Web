@@ -1,5 +1,19 @@
 import moment from 'moment-timezone';
+import '../vendor/bootstrap-calendar/js/calendar.js';
+import '../vendor/bootstrap-calendar/js/calendar-language_es-ES.js';
 import * as silverForce from './silverForce.js';
+
+window.tmpls = {
+  'day': require('html-loader!../vendor/bootstrap-calendar/tmpls/day.html'),
+  'week': require('html-loader!../vendor/bootstrap-calendar/tmpls/week.html'),
+  'week-days': require('html-loader!../vendor/bootstrap-calendar/tmpls/week-days.html'),
+  'month': require('html-loader!../vendor/bootstrap-calendar/tmpls/month.html'),
+  'month-day': require('html-loader!../vendor/bootstrap-calendar/tmpls/month-day.html'),
+  'year': require('html-loader!../vendor/bootstrap-calendar/tmpls/year.html'),
+  'year-month': require('html-loader!../vendor/bootstrap-calendar/tmpls/year-month.html'),
+  'events-list': require('html-loader!../vendor/bootstrap-calendar/tmpls/events-list.html'),
+  'modal': require('html-loader!../vendor/bootstrap-calendar/tmpls/modal.html')
+};
 
 export var options = {
   language: 'es-ES',

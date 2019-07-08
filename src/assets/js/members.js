@@ -1,3 +1,7 @@
+import * as Trianglify from '../vendor/trianglify.min.js';
+import '../vendor/ScrollToPlugin.min.js';
+import * as cardCircle from '../vendor/Card-circle.js';
+
 export var logros = {};
 
 /**
@@ -77,7 +81,7 @@ export function _bindCards() {
 
   $.each(elements, function (i, card) {
 
-    var instance = new Card(i, card);
+    var instance = new cardCircle.Card(i, card);
 
     layout[i] = {
       card: instance
@@ -267,6 +271,9 @@ export function initMembers() {
     zaba: {
       logros: ['2y', 'inteligencia', 'mando', 'medico', 'cqb']
     },
+    oriol: {
+      logros: ['2y']
+    },
     dami: {
       logros: ['2y', 'medico', 'cqb', 'mecanizada']
     },
@@ -282,23 +289,8 @@ export function initMembers() {
     lea: {
       logros: ['1y', 'medico']
     },
-    oriol: {
-      logros: []
-    },
     riddick: {
-      logros: ['propaganda', 'medico_exp', 'cqb', 'orientacion']
-    },
-    charlie: {
-      logros: ['medico']
-    },
-    asasinblack: {
-      logros: []
-    },
-    lluis: {
-      logros: ['cqb']
-    },
-    rod: {
-      logros: ['cqb']
+      logros: ['6m', 'propaganda', 'medico_exp', 'cqb', 'orientacion']
     },
     pitofloro: {
       logros: []
@@ -306,19 +298,19 @@ export function initMembers() {
     jota: {
       logros: ['medico_exp', 'cqb', 'rto']
     },
-    cristian: {
-      logros: []
-    },
     chicho98: {
-      logros: []
+      logros: ['medico']
     },
     tito: {
       logros: ['mando_exp', 'cqb']
     },
-    kiro: {
-      logros: ['cqb']
+    andreu: {
+      logros: ['']
     },
-    joe: {
+    shinda: {
+      logros: ['']
+    },
+    nielfox: {
       logros: ['']
     }
   };
