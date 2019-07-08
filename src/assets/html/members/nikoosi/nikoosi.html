@@ -1,0 +1,36 @@
+<div class="card__container card__container--closed">
+  <svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+    preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <clipPath id="clipPath-nikoosi">
+        <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+        <circle class="clip" cx="960" cy="250" r="992"></circle>
+      </clipPath>
+    </defs>
+    <image clip-path="url(#clipPath-nikoosi)" width="1920" height="500" xlink:href="${ require('./nikoosi.jpg') }"></image>
+  </svg>
+  <div class="card__content">
+    <span class="card__btn-close"><i class="fas fa-times"></i></span>
+    <div class="card__caption">
+      <h2 class="card__title">Nikoosi</h2>
+      <p class="card__subtitle">Novio de la muerte.</p>
+    </div>
+    <div class="card__copy">
+      <div class="meta">
+        <img class="meta__avatar" src="${ require('./nikoosi-face.jpg') }" alt="nikoosi" />
+        <div class="meta__author">
+          <h3 class="card__title">Nikoosi</h3>
+          <small class="card__subtitle">Novio de la muerte.</small>
+        </div>
+        <!-- <span class="meta__date">06/16/2015</span> -->
+      </div>
+
+      <p class="first">Me gusta el rol infantería  suelo jugar siempre que puedo con dicho rol.</p>
+      <p>Mis habilidades como  soldado son  saber trabajar en equipo, Interpretar y  ejecutar las ordenes recibidas y Pilotaje de helicópteros en general.</p>
+
+      <h4 class="mt-4">Méritos</h4>
+      <hr>
+      <div id="nikoosi_meritos" class="card-columns"></div>
+    </div>
+  </div>
+</div>

@@ -312,6 +312,12 @@ export function initMembers() {
     },
     nielfox: {
       logros: ['']
+    },
+    sabas: {
+      logros: ['']
+    },
+    nikoosi: {
+      logros: ['']
     }
   };
 
