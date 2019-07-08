@@ -204,9 +204,9 @@ export function initNavigation() {
         onclick: "goTo('nielfox-members')",
         text: 'NielFox'
       }, {
-        href: '#ErChiki',
+        href: '#erchiki',
         onclick: "goTo('erchiki-members')",
-        text: 'erchiki'
+        text: 'ErChiki'
       }, {
         href: '#sabas',
         onclick: "goTo('sabas-members')",
