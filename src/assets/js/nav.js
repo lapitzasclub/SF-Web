@@ -176,10 +176,6 @@ export function initNavigation() {
         onclick: "goTo('riddick-members')",
         text: 'Riddick'
       }, {
-        href: '#khuru',
-        onclick: "goTo('khuru-members')",
-        text: 'Khuru'
-      }, {
         href: '#pitofloro',
         onclick: "goTo('pitofloro-members')",
         text: 'Dani (Pitofloro)'
@@ -207,6 +203,18 @@ export function initNavigation() {
         href: '#nielfox',
         onclick: "goTo('nielfox-members')",
         text: 'NielFox'
+      }, {
+        href: '#erchiki',
+        onclick: "goTo('erchiki-members')",
+        text: 'ErChiki'
+      }, {
+        href: '#sabas',
+        onclick: "goTo('sabas-members')",
+        text: 'SabaS'
+      }, {
+        href: '#nikoosi',
+        onclick: "goTo('nikoosi-members')",
+        text: 'Nikoosi'
       }]
     }, {
       href: '#missions',
