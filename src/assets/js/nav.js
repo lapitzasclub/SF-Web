@@ -215,6 +215,22 @@ export function initNavigation() {
         href: '#nikoosi',
         onclick: "goTo('nikoosi-members')",
         text: 'Nikoosi'
+      }, {
+        href: '#fireruner',
+        onclick: "goTo('fireruner-members')",
+        text: 'Fireruner'
+      }, {
+        href: '#diez',
+        onclick: "goTo('diez-members')",
+        text: 'Diez'
+      }, {
+        href: '#kiketon',
+        onclick: "goTo('kiketon-members')",
+        text: 'Kiketon'
+      }, {
+        href: '#nazsgull',
+        onclick: "goTo('nazsgull-members')",
+        text: 'Nazsgull'
       }]
     }, {
       href: '#missions',
