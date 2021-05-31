@@ -318,6 +318,18 @@ export function initMembers() {
     },
     nikoosi: {
       logros: ['']
+    },
+    fireruner: {
+      logros: ['1y', 'propaganda', 'mando_exp', 'medico_exp', 'orientacion']
+    },
+    diez: {
+      logros: ['1y', 'medico_exp']
+    },
+    kiketon: {
+      logros: []
+    },
+    nazsgull: {
+      logros: []
     }
   };
 
